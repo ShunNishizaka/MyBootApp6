@@ -7,7 +7,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import org.springframework.stereotype.Repository;
 
-
+//ganba
 @Repository
 public class BookRepository {
 
