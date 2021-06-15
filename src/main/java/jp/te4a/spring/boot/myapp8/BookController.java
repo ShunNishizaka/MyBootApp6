@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 //ganbare
 
 @Controller
+@RequestMapping("books")
 public class BookController {
     @Autowired
     BookService bookService;
