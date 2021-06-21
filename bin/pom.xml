@@ -8,10 +8,10 @@
 		<version>2.5.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>jp.te4a.spring.boot.myapp10</groupId>
-	<artifactId>MyBootApp10</artifactId>
+	<groupId>jp.te4a.spring.boot.myapp9</groupId>
+	<artifactId>MyBootApp9</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>MyBootApp10</name>
+	<name>MyBootApp9</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
@@ -40,26 +40,13 @@
         	<artifactId>spring-boot-starter-data-jpa</artifactId>
     	</dependency>
 		
-		
-
-
-		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
-    		<groupId>mysql</groupId>
-    		<artifactId>mysql-connector-java</artifactId>
-    		<version>8.0.25</version>
-  			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jdbc</artifactId>
-        </dependency>
-		 <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web-services</artifactId>
-        </dependency>
+        	<groupId>com.h2database</groupId>
+        	<artifactId>h2</artifactId>
+        	<scope>runtime</scope>
+    	</dependency>
 		
-
+		
 		<dependency>
         	<groupId>org.springframework.boot</groupId>
         	<artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -69,17 +56,8 @@
         	<groupId>org.projectlombok</groupId>
         	<artifactId>lombok</artifactId>
     	</dependency>
-		 <dependency>
-      		<groupId>org.springframework.boot</groupId>
-      		<artifactId>spring-boot-starter-tomcat</artifactId>
-      		<scope>provided</scope>
-    	</dependency>
 
-		<dependency>
-      		<groupId>org.springframework</groupId>
-      		<artifactId>spring-webmvc</artifactId>
-    	</dependency>
-	
+
 	
 		
 	</dependencies>

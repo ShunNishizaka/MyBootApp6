@@ -1,4 +1,4 @@
-package jp.te4a.spring.boot.myapp9;
+package jp.te4a.spring.boot.myapp10;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ public class BookService {
 
     @Autowired
     BookRepository bookRepository;
-    private BookBean BookBean;
+    
         public BookForm create(BookForm bookForm) {
           BookBean bookBean = new BookBean();
           BeanUtils.copyProperties(bookForm, bookBean);
@@ -28,8 +28,10 @@ public class BookService {
       
         }
         public void delete(Integer id) {
-          bookRepository.delete(BookBean);
+          bookRepository.deleteById(id);
         }
+
+
         public List<BookForm> findAll() {
           List<BookBean> beanList = bookRepository.findAll();
           List<BookForm> formList = new ArrayList<BookForm>();
@@ -43,9 +45,11 @@ public class BookService {
         }
         
         public BookForm findOne(Integer id) {
-          Optional<BookBean> bookBean  = bookRepository.findById(id);
+          Optional<BookBean> opt  = bookRepository.findById(id);
           BookForm bookForm = new BookForm();
-          BeanUtils.copyProperties(bookBean, bookForm);
+          opt.ifPresent(book ->{
+              BeanUtils.copyProperties(book,bookForm);
+          });
           return bookForm;
         }
 
