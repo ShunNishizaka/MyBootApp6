@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
+//ganbatta
 @Table(name = "books")
 @Data
 @AllArgsConstructor
