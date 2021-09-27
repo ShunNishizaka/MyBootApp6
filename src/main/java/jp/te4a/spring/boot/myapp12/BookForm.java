@@ -1,9 +1,10 @@
-package jp.te4a.spring.boot.myapp11;
+package jp.te4a.spring.boot.myapp12;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 
 @Data
 @NoArgsConstructor
@@ -14,6 +15,7 @@ private Integer id ;
 @TestValid(param = "abc")
 private String title;
 @Size(min = 3, max = 20)
+@WritterValid(ok = "東北太郎")
 private String writter;
 private String publisher;
 @Min(0)
