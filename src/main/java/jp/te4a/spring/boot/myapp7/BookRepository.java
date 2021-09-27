@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 public class BookRepository {
 
     private final ConcurrentMap<Integer, BookBean> bookMap
-                                                                      = new ConcurrentHashMap<>();
+         = new ConcurrentHashMap<>();
     public BookBean save(BookBean bookBean) {
         return bookMap.put(bookBean.getId(), bookBean);
     }
